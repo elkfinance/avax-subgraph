@@ -1,31 +1,31 @@
 import { PairHourData } from './../types/schema'
 /* eslint-disable prefer-const */
 import { BigInt, BigDecimal, EthereumEvent } from '@graphprotocol/graph-ts'
-import { Pair, Bundle, Token, PangolinFactory, PangolinDayData, PairDayData, TokenDayData } from '../types/schema'
+import { Pair, Bundle, Token, ElkFactory, ElkDayData, PairDayData, TokenDayData } from '../types/schema'
 import { ONE_BI, ZERO_BD, ZERO_BI, FACTORY_ADDRESS } from './helpers'
 
-export function updatePangolinDayData(event: EthereumEvent): PangolinDayData {
-  let pangolin = PangolinFactory.load(FACTORY_ADDRESS)
+export function updateElkDayData(event: EthereumEvent): ElkDayData {
+  let elk = ElkFactory.load(FACTORY_ADDRESS)
   let timestamp = event.block.timestamp.toI32()
   let dayID = timestamp / 86400
   let dayStartTimestamp = dayID * 86400
-  let pangolinDayData = PangolinDayData.load(dayID.toString())
-  if (pangolinDayData === null) {
-    pangolinDayData = new PangolinDayData(dayID.toString())
-    pangolinDayData.date = dayStartTimestamp
-    pangolinDayData.dailyVolumeUSD = ZERO_BD
-    pangolinDayData.dailyVolumeETH = ZERO_BD
-    pangolinDayData.totalVolumeUSD = ZERO_BD
-    pangolinDayData.totalVolumeETH = ZERO_BD
-    pangolinDayData.dailyVolumeUntracked = ZERO_BD
+  let elkDayData = ElkDayData.load(dayID.toString())
+  if (elkDayData === null) {
+    elkDayData = new ElkDayData(dayID.toString())
+    elkDayData.date = dayStartTimestamp
+    elkDayData.dailyVolumeUSD = ZERO_BD
+    elkDayData.dailyVolumeETH = ZERO_BD
+    elkDayData.totalVolumeUSD = ZERO_BD
+    elkDayData.totalVolumeETH = ZERO_BD
+    elkDayData.dailyVolumeUntracked = ZERO_BD
   }
 
-  pangolinDayData.totalLiquidityUSD = pangolin.totalLiquidityUSD
-  pangolinDayData.totalLiquidityETH = pangolin.totalLiquidityETH
-  pangolinDayData.txCount = pangolin.txCount
-  pangolinDayData.save()
+  elkDayData.totalLiquidityUSD = elk.totalLiquidityUSD
+  elkDayData.totalLiquidityETH = elk.totalLiquidityETH
+  elkDayData.txCount = elk.txCount
+  elkDayData.save()
 
-  return pangolinDayData as PangolinDayData
+  return elkDayData as ElkDayData
 }
 
 export function updatePairDayData(event: EthereumEvent): PairDayData {

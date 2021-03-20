@@ -1,6 +1,6 @@
 specVersion: 0.0.2
-description: Pangolin is a decentralized exchange for swapping Ethereum and Avalanche assets on Avalanche.
-repository: https://github.com/pangolindex/subgraph
+description: ElkDex is a decentralized cross-chain exchange.
+repository: https://github.com/elkfinance/avax-subgraph
 schema:
   file: ./schema.graphql
 dataSources:
@@ -8,9 +8,9 @@ dataSources:
     name: Factory
     network: mainnet
     source:
-      address: '0xefa94DE7a4656D787667C749f7E1223D71E9FD88'
+      address: '0x091d35d7F63487909C863001ddCA481c6De47091'
       abi: Factory
-      startBlock: 56877
+      startBlock: 659666
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3

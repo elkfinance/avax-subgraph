@@ -1,6 +1,6 @@
 /* eslint-disable prefer-const */
 import { log } from '@graphprotocol/graph-ts'
-import { PangolinFactory, Pair, Token, Bundle } from '../types/schema'
+import { ElkFactory, Pair, Token, Bundle } from '../types/schema'
 import { PairCreated } from '../types/Factory/Factory'
 import { Pair as PairTemplate } from '../types/templates'
 import {
@@ -15,9 +15,9 @@ import {
 
 export function handleNewPair(event: PairCreated): void {
   // load factory (create if first exchange)
-  let factory = PangolinFactory.load(FACTORY_ADDRESS)
+  let factory = ElkFactory.load(FACTORY_ADDRESS)
   if (factory === null) {
-    factory = new PangolinFactory(FACTORY_ADDRESS)
+    factory = new ElkFactory(FACTORY_ADDRESS)
     factory.pairCount = 0
     factory.totalVolumeETH = ZERO_BD
     factory.totalLiquidityETH = ZERO_BD
