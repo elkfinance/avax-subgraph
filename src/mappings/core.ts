@@ -28,25 +28,19 @@ import {
 } from './helpers'
 
 let MINING_POOLS: string[] = [
-  "0xa16381eae6285123c323a665d4d99a6bcfaac307", // avax-eth
-  "0x4f019452f51bba0250ec8b69d64282b79fc8bd9f", // avax-usdt
-  "0x01897e996eefff65ae9999c02d1d8d7e9e0c0352", // avax-wbtc
-  "0x8fd2755c6ae7252753361991bdcd6ff55bdc01ce", // avax-png
-  "0x7d7ecd4d370384b17dfc1b4155a8410e97841b65", // avax-link
-  "0xb5b9ded9c193731f816ae1f8ffb7f8b0fae40c88", // avax-dai
-  "0xe4d9ae03859dac6d65432d557f75b9b588a38ee1", // avax-uni
-  "0x88f26b81c9cae4ea168e31bc6353f493fda29661", // avax-sushi
-  "0xee0023108918884181e48902f7c797573f413ece", // avax-aave
-  "0x797cbcf107519f4b279fc5db372e292cdf7e6956", // avax-yfi
-  "0x4e550fefbf888cb43ead73d821f646f43b1f2309", // png-eth
-  "0x7accc6f16bf8c0dce22371fbd914c6b5b402bf9f", // png-usdt
-  "0x99b06b9673fea30ba55179b1433ce909fdc28723", // png-wbtc
-  "0x4ad6e309805cb477010bea9ffc650cb27c1a9504", // png-link
-  "0x8866077f08b076360c25f4fd7fbc959ef135474c", // png-dai
-  "0x41188b4332fe68135d1524e43db98e81519d263b", // png-uni
-  "0x6955cb85edea63f861c0be39c3d7f8921606c4dc", // png-sushi
-  "0xb921a3ae9ceda66fa8a74dbb0946367fb14fae34", // png-aave
-  "0x2061298c76cd76219b9b44439e96a75f19c61f7f", // png-yfi
+  "0xaa8a33e7bcadb52ab4f43152682e483607fac83f", // avax-elk
+  "0x0f503ff3eec91a882513c4ec0cced8ce543f6bcf", // elk-usdt
+  "0xa8eb0fdfa77185c20beb05f40863226cd74b3d5b", // elk-eth
+  "0x2cb6c0710a5b9ee30ff41358dacc7bd7bbd8681f", // elk-wbtc
+  "0x819bbc76fd65a385a7b727723df5e636fc3e877f", // elk-link
+  "0x5b26b28276616a247ee61b9bb1b09e99a4576764", // elk-dai
+  "0x8b763519d3e634533b4039491e09f5774281e4b4", // elk-png
+  "0x86b2188aca3abce88ecb27cf6814790cb58587f3", // elk-yts
+  "0x2f9cac73265bc89257aeb33ae0ed273ebdfb755f", // avax-usdt
+  "0x599d0d43af7f84e245bf68b9e4517f3f8e43d900", // avax-eth
+  "0x97fb1a0d7cfe3bef6c2edbe1fcefd41a91318407", // avax-wbtc
+  "0xbb573d20d73296ec2c8051bec2c5c8d85ce46d22", // avax-link
+  "0x3da423405d2eb675b9046fe7c18b843b20ffadd3", // avax-dai
 ]
 
 function isCompleteMint(mintId: string): boolean {
