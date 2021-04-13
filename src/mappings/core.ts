@@ -37,6 +37,8 @@ let MINING_POOLS: string[] = [
   "0x8b763519d3e634533b4039491e09f5774281e4b4", // elk-png
   "0x25d8f5acdfc4086865c57d0b4567e47b9f9db0b9", // elk-sfi
   "0x86b2188aca3abce88ecb27cf6814790cb58587f3", // elk-yts
+  "0xa44bd7601f79c5d1c51fa3a89536d7be594ad008", // elk-olive
+  "0x7f16dff067931ee174021d744494327ef4780524", // elk-pefi
   "0x2f9cac73265bc89257aeb33ae0ed273ebdfb755f", // avax-usdt
   "0x599d0d43af7f84e245bf68b9e4517f3f8e43d900", // avax-eth
   "0x97fb1a0d7cfe3bef6c2edbe1fcefd41a91318407", // avax-wbtc
