@@ -44,7 +44,7 @@ export function getEthPriceInUSD(): BigDecimal {
 // token where amounts should contribute to tracked volume and liquidity
 let WHITELIST: string[] = [
   WETH_ADDRESS, // WAVAX
-  '0xE1C8f3d529BEa8E3fA1FAC5B416335a2f998EE1C', // ELK
+  '0xe1c8f3d529bea8e3fa1fac5b416335a2f998ee1c', // ELK
   '0x60781c2586d68229fde47564546784ab3faca982', // PNG
   '0xf20d962a6c8f70c731bd838a3a388d7d48fa6e15', // eth
   '0xde3a24028580884448a5397872046a019649b084', // usdt
