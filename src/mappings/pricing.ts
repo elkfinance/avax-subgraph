@@ -44,8 +44,8 @@ export function getEthPriceInUSD(): BigDecimal {
 // token where amounts should contribute to tracked volume and liquidity
 let WHITELIST: string[] = [
   WETH_ADDRESS, // WAVAX
-  '0xe1c8f3d529bea8e3fa1fac5b416335a2f998ee1c', // ELK
-  '0x60781c2586d68229fde47564546784ab3faca982', // PNG
+  '0xe1c8f3d529bea8e3fa1fac5b416335a2f998ee1c', // elk
+  '0x60781c2586d68229fde47564546784ab3faca982', // png
   '0xf20d962a6c8f70c731bd838a3a388d7d48fa6e15', // eth
   '0xde3a24028580884448a5397872046a019649b084', // usdt
   '0xb3fe5374f67d7a22886a0ee082b2e2f9d2651651', // link
@@ -54,7 +54,12 @@ let WHITELIST: string[] = [
   '0x408d4cd0adb7cebd1f1a1c33a0ba2098e1295bab', // wbtc
   '0x39cf1bd5f15fb22ec3d9ff86b0727afc203427cc', // sushi
   '0xba7deebbfc5fa1100fb055a87773e1e99cd3507a', // dai
-  '0x99519acb025a0e0d44c3875a4bbf03af65933627' // yfi
+  '0x99519acb025a0e0d44c3875a4bbf03af65933627', // yfi
+  '0x617724974218a18769020a70162165a539c07e8a', // olive
+  '0xe896cdeaac9615145c0ca09c8cd5c25bced6384c', // pefi
+  '0x1f1fe1ef06ab30a791d6357fdf0a7361b39b1537', // sfi
+  '0x6e7f5c0b9f4432716bdd0a77a3601291b9d9e985', // spore
+  '0x488f73cddda1de3664775ffd91623637383d6404', // yts
 ]
 
 // minimum liquidity required to count towards tracked volume for pairs with small # of Lps
