@@ -30,18 +30,18 @@ import {
 let MINING_POOLS: string[] = [
   // ALWAYS IN LOWER CASE!!
   // Round 2
-  "0xfebf47cf89f766e6c24317b17f862ba5d4d82f8c", // elk-avax
-  "0x53e3d3e77b3ed38fdc5156f6ef761d85012850c2", // elk-usdt
-  "0x3fbd7dd99ca32f98a56ddee57b6b96e1152668f5", // elk-eth
-  "0x5bae3110066890d0bdb9837c14c2461168a3407e", // elk-wbtc
-  "0x3e58308a97af12ad4affe6f688a8b7e8a8e459b1", // elk-link
-  "0xf31a76d123dd6b10008f2f096ab0aafbd508a2de", // elk-dai
-  "0x266ed42866b3d2d418c87ebf8b58f22add0e6f8e", // elk-png
-  "0x79521b914ec1b55e1bb4d52978fb585918a827db", // elk-yts
-  "0x9f125fe210b27199229221be5f8e0ebb9094af37", // elk-olive
-  "0x1245819ff9b947ffe352ed6fab40e6ace7299677", // elk-pefi
-  "0xce453c94f63990f2597cca15960a048fd44ceba1", // elk-spore
-  "0xdab4513a18ab3ce23470c1a75e3da7dca2643c35", // elk-sushi
+  "0x3a79b48d3dcc17dd6f1f844769ab309e4b969071", // elk-avax
+  "0x7c516cf7e4f4f1bd49d355a97f81f13dbfcbe0d7", // elk-usdt
+  "0x5311ea28df83703fde89797a56a39e30f09a2016", // elk-eth
+  "0x6ebc13418aaae79031e5cba2c46343d551454a6a", // elk-wbtc
+  "0xf9381821ab0c50cbc2fd9e6d578dcaf12c547ec6", // elk-link
+  "0xced63f752ab8b2a58f1c7b8ef5438b263efd990a", // elk-dai
+  "0x69572262bd8efe1f1c58955aeaff4ce720e67b1b", // elk-png
+  "0xb79604244adc72e566eed6769ea3f3070c13fa66", // elk-yts
+  "0xf48178449edc09f59e3b04261d51a3bf43aed71e", // elk-olive
+  "0x78ec4648d2463bc792f0fe0131fa40c9381ca0cb", // elk-pefi
+  "0xa99469e429716a38bf1d858df3fb2a8f4a229e4c", // elk-spore
+  "0x9f2dc6aa55ec08aadd73b3a6331f081a20a5f212", // elk-sushi
   // Round 1
   "0xaa8a33e7bcadb52ab4f43152682e483607fac83f", // avax-elk
   "0x0f503ff3eec91a882513c4ec0cced8ce543f6bcf", // elk-usdt
