@@ -29,6 +29,22 @@ import {
 
 let MINING_POOLS: string[] = [
   // ALWAYS IN LOWER CASE!!
+  // Round 3
+  "0xfebf47cf89f766e6c24317b17f862ba5d4d82f8c", // elk-avax
+  "0x53e3d3e77b3ed38fdc5156f6ef761d85012850c2", // elk-usdt
+  "0x3fbd7dd99ca32f98a56ddee57b6b96e1152668f5", // elk-eth
+  "0x5bae3110066890d0bdb9837c14c2461168a3407e", // elk-wbtc
+  "0x3e58308a97af12ad4affe6f688a8b7e8a8e459b1", // elk-link
+  "0xf31a76d123dd6b10008f2f096ab0aafbd508a2de", // elk-dai
+  "0x266ed42866b3d2d418c87ebf8b58f22add0e6f8e", // elk-png
+  "0x79521b914ec1b55e1bb4d52978fb585918a827db", // elk-yts
+  "0x9f125fe210b27199229221be5f8e0ebb9094af37", // elk-olive
+  "0x1245819ff9b947ffe352ed6fab40e6ace7299677", // elk-pefi
+  "0xce453c94f63990f2597cca15960a048fd44ceba1", // elk-spore
+  "0xdab4513a18ab3ce23470c1a75e3da7dca2643c35", // elk-sushi
+  "0x7e449382cba7560a159301806f63550c4e05009c", // elk-sfi
+  "0x73a5e6752205688889c684349270e430bd36af8c", // elk-sl3
+  "0x4a4421c3315319ee9ac251aa851d780672e1544d", // elk-snob
   // Round 2
   "0x3a79b48d3dcc17dd6f1f844769ab309e4b969071", // elk-avax
   "0x7c516cf7e4f4f1bd49d355a97f81f13dbfcbe0d7", // elk-usdt
