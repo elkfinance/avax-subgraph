@@ -30,21 +30,21 @@ import {
 let MINING_POOLS: string[] = [
   // ALWAYS IN LOWER CASE!!
   // Round 3
-  "0xfebf47cf89f766e6c24317b17f862ba5d4d82f8c", // elk-avax
-  "0x53e3d3e77b3ed38fdc5156f6ef761d85012850c2", // elk-usdt
-  "0x3fbd7dd99ca32f98a56ddee57b6b96e1152668f5", // elk-eth
-  "0x5bae3110066890d0bdb9837c14c2461168a3407e", // elk-wbtc
-  "0x3e58308a97af12ad4affe6f688a8b7e8a8e459b1", // elk-link
-  "0xf31a76d123dd6b10008f2f096ab0aafbd508a2de", // elk-dai
-  "0x266ed42866b3d2d418c87ebf8b58f22add0e6f8e", // elk-png
-  "0x79521b914ec1b55e1bb4d52978fb585918a827db", // elk-yts
-  "0x9f125fe210b27199229221be5f8e0ebb9094af37", // elk-olive
-  "0x1245819ff9b947ffe352ed6fab40e6ace7299677", // elk-pefi
-  "0xce453c94f63990f2597cca15960a048fd44ceba1", // elk-spore
-  "0xdab4513a18ab3ce23470c1a75e3da7dca2643c35", // elk-sushi
-  "0x7e449382cba7560a159301806f63550c4e05009c", // elk-sfi
-  "0x73a5e6752205688889c684349270e430bd36af8c", // elk-sl3
-  "0x4a4421c3315319ee9ac251aa851d780672e1544d", // elk-snob
+  "0x9080bd46a55f8a32db2b609c74f8125a08dafbc3", // elk-avax
+  "0x4235f9be035541a69525fa853e2369fe493ba936", // elk-usdt
+  "0x777e391521a542430bdd59be48b1eac00117427c", // elk-eth
+  "0x2d9c1e87595c6ed24cfec114549a955b7023e1a9", // elk-wbtc
+  "0xe18ae29256ee2d31f7a4aa72567fde1ff7d9895e", // elk-link
+  "0xfeeff2fcb7fe9f3211abe643c3f49f3a4f04063a", // elk-dai
+  "0xc1e72bf3f97505537adad52639f3bbf2df5e5736", // elk-png
+  "0x9bc04d39a721b48ca33700214961ac5cc3622f76", // elk-yts
+  "0x99ef222dba70eb0a396115d3ad0633c88bc73582", // elk-olive
+  "0xa8d91c6093b700897e4654a71be67fe017f10098", // elk-pefi
+  "0x621b5adc58cce0f1efa0c51007ab9a923213f759", // elk-spore
+  "0xb961966cae73a66e96d22965de8d253c0fcbcf04", // elk-sushi
+  "0xec4676aaae8b958464d087d4faaa6731f0596ae9", // elk-sfi
+  "0x325d72d3d0806fd2a45a6c44e3e51d18d8187117", // elk-sl3
+  "0x0da14647cc52cd93cd5c57bb67dc45de4cd12ef1", // elk-snob
   // Round 2
   "0x3a79b48d3dcc17dd6f1f844769ab309e4b969071", // elk-avax
   "0x7c516cf7e4f4f1bd49d355a97f81f13dbfcbe0d7", // elk-usdt
