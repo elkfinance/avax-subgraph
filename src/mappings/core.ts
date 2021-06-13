@@ -45,6 +45,8 @@ let MINING_POOLS: string[] = [
   "0x8020138c90433d8918a95d141231a5f34ecc69ed", // sl3-elk
   "0x0c7460a12fad2f1e0e1d3ec86a3471947c16a2b6", // arfv2-elk
   "0x1ccbb416bfafa14fb06192b9f542db0c246388fe", // snob-elk
+  "0xcd01b1ad51fafd09a59f66e80564642a9b025c4c", // ave-elk
+  "0xc13c56e2b7e2362fec31fb431781b2f2b1010c86", // husky-elk
   // Round 3
   "0x9080bd46a55f8a32db2b609c74f8125a08dafbc3", // elk-avax
   "0x4235f9be035541a69525fa853e2369fe493ba936", // elk-usdt
