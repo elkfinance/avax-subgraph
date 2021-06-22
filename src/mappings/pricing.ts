@@ -44,7 +44,8 @@ export function getEthPriceInUSD(): BigDecimal {
 // token where amounts should contribute to tracked volume and liquidity
 let WHITELIST: string[] = [
   WETH_ADDRESS, // WAVAX
-  '0xe1c8f3d529bea8e3fa1fac5b416335a2f998ee1c', // elk
+  '0xe1c110e1b1b4a1ded0caf3e42bfbdbb7b5d7ce1c', // elk
+  '0xe1c8f3d529bea8e3fa1fac5b416335a2f998ee1c', // elk_legacy
   '0x60781c2586d68229fde47564546784ab3faca982', // png
   '0xf20d962a6c8f70c731bd838a3a388d7d48fa6e15', // eth
   '0xde3a24028580884448a5397872046a019649b084', // usdt
@@ -63,6 +64,7 @@ let WHITELIST: string[] = [
   '0xc38f41a296a4493ff429f1238e030924a1542e50', // snob
   '0x6e7f5c0b9f4432716bdd0a77a3601291b9d9e985', // spore
   '0x488f73cddda1de3664775ffd91623637383d6404', // yts
+  '0x61ecd63e42c27415696e10864d70ecea4aa11289', // rugpull
 ]
 
 // minimum liquidity required to count towards tracked volume for pairs with small # of Lps

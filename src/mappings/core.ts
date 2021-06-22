@@ -28,6 +28,25 @@ import {
 
 let MINING_POOLS: string[] = [
   // ALWAYS IN LOWER CASE!!
+  // Round 5
+  '0x143fc3b2f36287339edca2b121033e2a72d0d4ef', // avax-elk
+  '0xa5af747d6e1b199755834f1e8490ba1df0070e24', // usdt-elk
+  '0x0d59c0092a1d7d2b348824419d5fc7d7f42d7c98', // eth-elk
+  '0xa492a986a2744ca65679ed36ffd3c6be2e694246', // wbtc-elk
+  '0xbfd2c7725f1f2690eb11f2bd01ec7171b9ce8e0c', // link-elk
+  '0x5685697148563e21e3f896de7d1c89183dc84e9b', // dai-elk
+  '0x38be387c33946fa92c800e761ea486f5a0c4ddf3', // png-elk
+  '0x7c3edab3fab6f4786fe4a89c6ac8c539e0bb2aab', // yts-elk
+  '0x44bdcf5bf279fef689e1e0cc4cee81e35d297833', // olive-elk
+  '0x2ef4590f4f282e7c042874ff9c37d9d371963f32', // pefi-elk
+  '0x685f0548b356f97fa44bda366e9cc47d82d5d989', // spore-elk
+  '0x01645d7c05cbe5d8028584f0c8b6d6407b7febb2', // sushi-elk
+  '0x9a4c71941d63d9060deeef1132cf76ccecb261a9', // snob-elk
+  '0xa65938df082f58fa0b9a6d8c35865cb104e2e5d1', // sfi-elk
+  '0x75a83ae18023ef32d97451117d9e6b202d17291f', // sl3-elk
+  '0xbcf9f29b6cfee4dc2a1835c4707bc90b1d35fbe0', // arfv2-elk
+  '0xb92655de8a5f6edcbdd6beeb110f385646de1768', // ave-elk
+  '0xeb10facda0fe4b80839f3faf4886034387d6709b', // husky-elk
   // Round 4
   "0xc990380d5fb656010bcb8ab1e7f1041bc3155dfd", // avax-elk
   "0x4454d8df7cc99ccf1f5463ba3fffe1499a432392", // usdt-elk
