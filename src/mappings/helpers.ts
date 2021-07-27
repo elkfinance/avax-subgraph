@@ -103,9 +103,9 @@ export function fetchTokenTotalSupply(tokenAddress: Address): BigInt {
   let totalSupplyValue = null
   let totalSupplyResult = contract.try_totalSupply()
   if (!totalSupplyResult.reverted) {
-    totalSupplyValue = totalSupplyResult as i32
+    totalSupplyValue = totalSupplyResult.value.div(BigInt.fromI32(1000000000).times(BigInt.fromI32(1000000000)))
   }
-  return BigInt.fromI32(totalSupplyValue as i32)
+  return totalSupplyValue
 }
 
 export function fetchTokenDecimals(tokenAddress: Address): BigInt {
