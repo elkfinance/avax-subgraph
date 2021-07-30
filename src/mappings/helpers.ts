@@ -98,6 +98,16 @@ export function fetchTokenName(tokenAddress: Address): string {
   return nameValue
 }
 
+/*export function fetchTokenTotalSupply(tokenAddress: Address): BigInt {
+  let contract = ERC20.bind(tokenAddress)
+  let totalSupplyResult = contract.try_totalSupply()
+  if (!totalSupplyResult.reverted) {
+    return totalSupplyResult.value.div(BigInt.fromI32(1000000000).times(BigInt.fromI32(1000000000)))
+  } else {
+    return BigInt.fromI32(0)
+  }
+}*/
+
 export function fetchTokenTotalSupply(tokenAddress: Address): BigInt {
   let contract = ERC20.bind(tokenAddress)
   let totalSupplyValue = null
