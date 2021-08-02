@@ -65,6 +65,7 @@ let WHITELIST: string[] = [
   '0x6e7f5c0b9f4432716bdd0a77a3601291b9d9e985', // spore
   '0x488f73cddda1de3664775ffd91623637383d6404', // yts
   '0x61ecd63e42c27415696e10864d70ecea4aa11289', // rugpull
+  '0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd', // joe
 ]
 
 // minimum liquidity required to count towards tracked volume for pairs with small # of Lps
