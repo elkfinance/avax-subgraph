@@ -5,39 +5,40 @@ import { ZERO_BD, factoryContract, ADDRESS_ZERO, ONE_BD } from './helpers'
 import { log } from '@graphprotocol/graph-ts'
 
 const WETH_ADDRESS = '0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7'
-const USDC_WETH_PAIR = '0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc' // created 10008355
-const DAI_WETH_PAIR = '0xa478c2975ab1ea89e8196811f51a7b7ade33eb11' // created block 10042267
-const USDT_WETH_PAIR = '0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852' // created block 10093341
+const USDT_WETH_PAIR = '0x0826e1a55ebef25d725bb944555f714db84d95bb'
+const USDCe_WETH_PAIR = '0x490c69b3a746a10b163f1e9a5674f2057d3d956f'
+const DAIe_WETH_PAIR = '0xdfff750529a2eaba8b13e1b81f054ede83ca52a2'
+const USDTe_WETH_PAIR = '0x563d2d28ea10691bae85838d1ee8f1397217b252'
 
 export function getEthPriceInUSD(): BigDecimal {
   // fetch eth prices for each stablecoin
-  let daiPair = Pair.load(DAI_WETH_PAIR) // dai is token0
-  let usdcPair = Pair.load(USDC_WETH_PAIR) // usdc is token0
+  let daiePair = Pair.load(DAIe_WETH_PAIR) // daie is token1
+  let usdcePair = Pair.load(USDCe_WETH_PAIR) // usdce is token0
+  let usdtePair = Pair.load(USDTe_WETH_PAIR) // usdte is token1
   let usdtPair = Pair.load(USDT_WETH_PAIR) // usdt is token1
 
   // all 3 have been created
-  if (daiPair !== null && usdcPair !== null && usdtPair !== null) {
-    let totalLiquidityETH = daiPair.reserve1.plus(usdcPair.reserve1).plus(usdtPair.reserve0)
-    let daiWeight = daiPair.reserve1.div(totalLiquidityETH)
-    let usdcWeight = usdcPair.reserve1.div(totalLiquidityETH)
-    let usdtWeight = usdtPair.reserve0.div(totalLiquidityETH)
-    return daiPair.token0Price
-      .times(daiWeight)
-      .plus(usdcPair.token0Price.times(usdcWeight))
-      .plus(usdtPair.token1Price.times(usdtWeight))
+  if (daiePair !== null && usdcePair !== null && usdtePair !== null) {
+    let totalLiquidityETH = daiePair.reserve0.plus(usdcePair.reserve1).plus(usdtePair.reserve0)
+    let daieWeight = daiePair.reserve0.div(totalLiquidityETH)
+    let usdceWeight = usdcePair.reserve1.div(totalLiquidityETH)
+    let usdteWeight = usdtePair.reserve0.div(totalLiquidityETH)
+    return daiePair.token1Price.times(daieWeight)
+      .plus(usdcePair.token0Price.times(usdceWeight))
+      .plus(usdtePair.token1Price.times(usdteWeight))
     // dai and USDC have been created
-  } else if (daiPair !== null && usdcPair !== null) {
-    let totalLiquidityETH = daiPair.reserve1.plus(usdcPair.reserve1)
-    let daiWeight = daiPair.reserve1.div(totalLiquidityETH)
-    let usdcWeight = usdcPair.reserve1.div(totalLiquidityETH)
-    return daiPair.token0Price.times(daiWeight).plus(usdcPair.token0Price.times(usdcWeight))
+  } else if (daiePair !== null && usdcePair !== null) {
+    let totalLiquidityETH = daiePair.reserve0.plus(usdcePair.reserve1)
+    let daieWeight = daiePair.reserve0.div(totalLiquidityETH)
+    let usdceWeight = usdcePair.reserve1.div(totalLiquidityETH)
+    return daiePair.token1Price.times(daieWeight).plus(usdcePair.token0Price.times(usdceWeight))
     // USDC is the only pair so far
-  } else if (usdcPair !== null) {
-    return usdcPair.token0Price
+  } else if (usdcePair !== null) {
+    return usdcePair.token0Price
+  }  else if (usdtPair !== null) {
+    return usdtPair.token1Price
   } else {
-    //return ONE_BD.times(BigDecimal.fromString("4")) // hack, REMOVE!
-    let ret = ONE_BD.times(BigDecimal.fromString("2")).div(BigDecimal.fromString("2"))
-    return ret // hack, REMOVE!
+    return ONE_BD
   }
 }
 
@@ -46,34 +47,42 @@ let WHITELIST: string[] = [
   WETH_ADDRESS, // WAVAX
   '0xe1c110e1b1b4a1ded0caf3e42bfbdbb7b5d7ce1c', // elk
   '0xe1c8f3d529bea8e3fa1fac5b416335a2f998ee1c', // elk_legacy
-  '0x60781c2586d68229fde47564546784ab3faca982', // png
-  '0xf20d962a6c8f70c731bd838a3a388d7d48fa6e15', // eth
-  '0xde3a24028580884448a5397872046a019649b084', // usdt
-  '0xb3fe5374f67d7a22886a0ee082b2e2f9d2651651', // link
+  '0x63a72806098bd3d9520cc43356dd78afe5d386d9', // aave.e-elk
   '0x8ce2dee54bb9921a2ae0a63dbb2df8ed88b91dd9', // aave
-  '0xf39f9671906d8630812f9d9863bbef5d523c84ab', // uni
-  '0x408d4cd0adb7cebd1f1a1c33a0ba2098e1295bab', // wbtc
-  '0x39cf1bd5f15fb22ec3d9ff86b0727afc203427cc', // sushi
+  '0x63a72806098bd3d9520cc43356dd78afe5d386d9', // aave.e
+  '0x3ab71ca6da13e50ab4966e3a0566d1b6b118c4ae', // arfv2
+  '0x78ea17559B3D2CF85a7F9C2C704eda119Db5E6dE', // ave
+  '0x1ecd47ff4d9598f89721a2866bfeb99505a413ed', // avme
   '0xba7deebbfc5fa1100fb055a87773e1e99cd3507a', // dai
-  '0x99519acb025a0e0d44c3875a4bbf03af65933627', // yfi
+  '0xd586e7f844cea2f87f50152665bcbc2c279d8d70', // dai.e
+  '0xf20d962a6c8f70c731bd838a3a388d7d48fa6e15', // eth
+  '0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab', // weth.e
+  '0x65378b697853568da9ff8eab60c13e1ee9f4a654', // husky
+  '0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd', // joe
+  '0xb3fe5374f67d7a22886a0ee082b2e2f9d2651651', // link
+  '0x5947bb275c521040051d82396192181b413227a3', // link.e
   '0x617724974218a18769020a70162165a539c07e8a', // olive
   '0xe896cdeaac9615145c0ca09c8cd5c25bced6384c', // pefi
+  '0x60781c2586d68229fde47564546784ab3faca982', // png
+  '0x8729438eb15e2c8b576fcc6aecda6a148776c0f5', // qi
+  '0x61ecd63e42c27415696e10864d70ecea4aa11289', // rugpull
   '0x1f1fe1ef06ab30a791d6357fdf0a7361b39b1537', // sfi
+  '0xa5e59761ebd4436fa4d20e1a27cba29fb2471fc6', // sherpa
   '0x2841a8a2ce98a9d21ad8c3b7fc481527569bd7bb', // sl3
-  '0x3ab71ca6da13e50ab4966e3a0566d1b6b118c4ae', // arfv2
   '0xc38f41a296a4493ff429f1238e030924a1542e50', // snob
   '0x6e7f5c0b9f4432716bdd0a77a3601291b9d9e985', // spore
+  '0x39cf1bd5f15fb22ec3d9ff86b0727afc203427cc', // sushi
+  '0x37b608519f91f70f2eeb0e5ed9af4061722e4f76', // sushi.e
+  '0x21c5402c3b7d40c89cc472c9df5dd7e51bbab1b1', // tundra
+  '0xde3a24028580884448a5397872046a019649b084', // usdt
+  '0xc7198437980c041c805a1edcba50c1ce5db95118', // usdt.e
+  '0x846d50248baf8b7ceaa9d9b53bfd12d7d7fbb25a', // vso
+  '0x408d4cd0adb7cebd1f1a1c33a0ba2098e1295bab', // wbtc
+  '0x50b7545627a5162f82a992c33b87adc75187b218', // wbtc.e
+  '0xd1c3f94de7e5b45fa4edbba472491a9f4b166fc4', // xava
+  '0x59414b3089ce2af0010e7523dea7e2b35d776ec7', // yak
+  '0x99519acb025a0e0d44c3875a4bbf03af65933627', // yfi
   '0x488f73cddda1de3664775ffd91623637383d6404', // yts
-  '0x61ecd63e42c27415696e10864d70ecea4aa11289', // rugpull
-  '0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd', // joe
-  '0xd586e7f844cea2f87f50152665bcbc2c279d8d70', // dai.e-elk
-  '0x78ea17559b3d2cf85a7f9c2c704eda119db5e6de', // ave-elk
-  '0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab', // eth.e-elk
-  '0xc7198437980c041c805a1edcba50c1ce5db95118', // usdt.e-elk
-  '0x5947bb275c521040051d82396192181b413227a3', // link.e-elk
-  '0x50b7545627a5162f82a992c33b87adc75187b218', // wbtc.e.-elk
-  '0x37b608519f91f70f2eeb0e5ed9af4061722e4f76', // sushi.e-elk
-  '0x63a72806098bd3d9520cc43356dd78afe5d386d9', // aave.e-elk
 ]
 
 // minimum liquidity required to count towards tracked volume for pairs with small # of Lps
