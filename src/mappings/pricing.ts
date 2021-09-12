@@ -66,6 +66,14 @@ let WHITELIST: string[] = [
   '0x488f73cddda1de3664775ffd91623637383d6404', // yts
   '0x61ecd63e42c27415696e10864d70ecea4aa11289', // rugpull
   '0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd', // joe
+  '0xd586e7f844cea2f87f50152665bcbc2c279d8d70', // dai.e-elk
+  '0x78ea17559b3d2cf85a7f9c2c704eda119db5e6de', // ave-elk
+  '0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab', // eth.e-elk
+  '0xc7198437980c041c805a1edcba50c1ce5db95118', // usdt.e-elk
+  '0x5947bb275c521040051d82396192181b413227a3', // link.e-elk
+  '0x50b7545627a5162f82a992c33b87adc75187b218', // wbtc.e.-elk
+  '0x37b608519f91f70f2eeb0e5ed9af4061722e4f76', // sushi.e-elk
+  '0x63a72806098bd3d9520cc43356dd78afe5d386d9', // aave.e-elk
 ]
 
 // minimum liquidity required to count towards tracked volume for pairs with small # of Lps
