@@ -52,6 +52,7 @@ let MINING_POOLS: string[] = [
   '0x29c06e6a797fef985290e71a819f49619153e129', // tundra-elk
   '0x4280492c441c3ed592a6537bd428fecbe4bc3787', // sherpa-elk
   '0x3b7aeb242f55204dc31ce09cc31d0315caead638', // rugpull-elk
+  '0x7eb3a69252b5a29d0239b45e088a4baec906a0b1', // dcau-elk
   // Round 7
   '0xda9cf7ca08982db05dc04e538a2d9a4ffdee6952', // avax-elk
   '0xe9e6799cd59c1cea3c4606b83f38621f150c605b', // dai.e-elk
