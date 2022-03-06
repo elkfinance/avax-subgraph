@@ -28,6 +28,75 @@ import {
 
 let MINING_POOLS: string[] = [
   // ALWAYS IN LOWER CASE!!
+  // Round 11
+  '0x9ec3ca469f415a7e55a21dc662d427d59e8de8f6', // avax-elk
+  '0xe935028df3285d1852e11dae384534d27887c196', // usdc.e-elk
+  '0x7eb3a69252b5a29d0239b45e088a4baec906a0b1', // dcau-elk
+  '0xd3641c0ebe0361de44d0298e165943b6b0422d98', // eth.e-elk
+  '0x51e07ff9c0f78f88b3c094a71d338d1681c3ad20', // teddy-elk
+  '0x76d80ca1fc1dd8355b692f961d198dd7a2858edb', // avai-elk
+  '0x5916de85c68db865f35df760f01110f09b5be90e', // melt-elk
+  '0xebf8bd7a000d02849cced5feb2079028e2fa6d23', // h2o-elk
+  '0x17c2e0d60b75961729aecc69ccc7e904b9411fa3', // racex-elk
+  '0xc2c8944b0c66eca1b55dc9f9c959c1d6ac77f70e', // yak-elk
+  '0xad7185fe19ef6607ab7631749373a261461adf7c', // joe-elk
+  '0xa4f5447ce95fe4cdb7ecd023d6ea0274b85a27ff', // ave-elk
+  '0x54d434c6688986b24a2d01df8e0c116744fca5f6', // snob-elk
+  '0xcf025c16c9cd72eebf0513a1ed8f588f99d1bcd9', // png-elk
+  '0x598acf0e3af1b81891403167e9ecd4744a1e6f9f', // vso-elk
+  '0x1dd9d03da8d3fc3af45ad57d75fa99e97ca9abc6', // xava-elk
+  '0xd1e8ee19f4501987468891a5505e596031610f86', // avme-elk
+  '0xf2c55153b408b5030e62617861a15aa99727ff3f', // yts-elk
+  '0x1a9292de525231f377b59b982fa1bbe16b83e166', // olive-elk
+  '0x4280492c441c3ed592a6537bd428fecbe4bc3787', // sherpa-elk
+  '0x3b7aeb242f55204dc31ce09cc31d0315caead638', // rugpull-elk
+  // Round 10
+  '0x9ec3ca469f415a7e55a21dc662d427d59e8de8f6', // avax-elk
+  '0x482dcc1b2477d44af818d7a9b0d1f545356cb58a', // usdt.e-elk
+  '0x76d80ca1fc1dd8355b692f961d198dd7a2858edb', // avai-elk
+  '0x7eb3a69252b5a29d0239b45e088a4baec906a0b1', // dcau-elk
+  '0x5916de85c68db865f35df760f01110f09b5be90e', // melt-elk
+  '0xebf8bd7a000d02849cced5feb2079028e2fa6d23', // h2o-elk
+  '0xc2c8944b0c66eca1b55dc9f9c959c1d6ac77f70e', // yak-elk
+  '0xad7185fe19ef6607ab7631749373a261461adf7c', // joe-elk
+  '0xa4f5447ce95fe4cdb7ecd023d6ea0274b85a27ff', // ave-elk
+  '0xd3641c0ebe0361de44d0298e165943b6b0422d98', // eth.e-elk
+  '0x17c2e0d60b75961729aecc69ccc7e904b9411fa3', // racex-elk
+  '0x54d434c6688986b24a2d01df8e0c116744fca5f6', // snob-elk
+  '0xcf025c16c9cd72eebf0513a1ed8f588f99d1bcd9', // png-elk
+  '0x598acf0e3af1b81891403167e9ecd4744a1e6f9f', // vso-elk
+  '0x1dd9d03da8d3fc3af45ad57d75fa99e97ca9abc6', // xava-elk
+  '0xd1e8ee19f4501987468891a5505e596031610f86', // avme-elk
+  '0x84ecab09c480121cf0b94726d6230901886f97ef', // qi-elk
+  '0xf2c55153b408b5030e62617861a15aa99727ff3f', // yts-elk
+  '0x1a9292de525231f377b59b982fa1bbe16b83e166', // olive-elk
+  '0x29c06e6a797fef985290e71a819f49619153e129', // tundra-elk
+  '0x4280492c441c3ed592a6537bd428fecbe4bc3787', // sherpa-elk
+  '0x3b7aeb242f55204dc31ce09cc31d0315caead638', // rugpull-elk
+  // Round 9
+  '0x9ec3ca469f415a7e55a21dc662d427d59e8de8f6', // avax-elk
+  '0x482dcc1b2477d44af818d7a9b0d1f545356cb58a', // usdt.e-elk
+  '0xafdb3f79ac7de9d8e95c6e774f222959cc99e889', // dai.e-elk
+  '0x76d80ca1fc1dd8355b692f961d198dd7a2858edb', // avai-elk
+  '0x7eb3a69252b5a29d0239b45e088a4baec906a0b1', // dcau-elk
+  '0xc2c8944b0c66eca1b55dc9f9c959c1d6ac77f70e', // yak-elk
+  '0xad7185fe19ef6607ab7631749373a261461adf7c', // joe-elk
+  '0xa4f5447ce95fe4cdb7ecd023d6ea0274b85a27ff', // ave-elk
+  '0xd3641c0ebe0361de44d0298e165943b6b0422d98', // eth.e-elk
+  '0x6609b69a3ea9f8239dce55e99ff349517525326d', // link.e-elk
+  '0x54d434c6688986b24a2d01df8e0c116744fca5f6', // snob-elk
+  '0x83f1237728ecafd010b1b593b947d2e44a3fac25', // plt-elk
+  '0x5cc7b78432140b7a8dd955d51f3d9ba4e707b65e', // wbtc.e-elk
+  '0xcf025c16c9cd72eebf0513a1ed8f588f99d1bcd9', // png-elk
+  '0x598acf0e3af1b81891403167e9ecd4744a1e6f9f', // vso-elk
+  '0x1dd9d03da8d3fc3af45ad57d75fa99e97ca9abc6', // xava-elk
+  '0xd1e8ee19f4501987468891a5505e596031610f86', // avme-elk
+  '0x84ecab09c480121cf0b94726d6230901886f97ef', // qi-elk
+  '0xf2c55153b408b5030e62617861a15aa99727ff3f', // yts-elk
+  '0x1a9292de525231f377b59b982fa1bbe16b83e166', // olive-elk
+  '0x29c06e6a797fef985290e71a819f49619153e129', // tundra-elk
+  '0x4280492c441c3ed592a6537bd428fecbe4bc3787', // sherpa-elk
+  '0x3b7aeb242f55204dc31ce09cc31d0315caead638', // rugpull-elk
   // Round 8
   '0x9ec3ca469f415a7e55a21dc662d427d59e8de8f6', // avax-elk
   '0xafdb3f79ac7de9d8e95c6e774f222959cc99e889', // dai.e-elk
