@@ -28,6 +28,27 @@ import {
 
 let MINING_POOLS: string[] = [
   // ALWAYS IN LOWER CASE!!
+  // Round 12
+  '0xde3f38fd15f566416fe3941b57e1b0a50a9487e1', // avax-elk
+  '0xd7d71e4bc981b50696fa536d330bf745ae563e25', // dcau-elk
+  '0xdb59ef120ff1fa5013bb5047e513162003034723', // usdc.e-elk
+  '0x8c3483df8fa193a18c0eda71d2f7114381ea28c7', // weth.e-elk
+  '0x3f069263c05a31c3b8cc3f621cd4baf3c8c9b071', // avai-elk
+  '0xd5fcd5c0d1614fb3e8c5aadd43f8ac8d7a3d0c9a', // h2o-elk
+  '0xbe43ac8151b6ae3a9228e46c4d01b6c6566e3fbf', // melt-elk
+  '0xaeb9488d0bd5ad782784b3d873c496d91c883091', // racex-elk
+  '0x737ffa0fc4dfb6fadbee0d2fd9b7ddab30efb3b9', // teddy-elk
+  '0x103024f6f514a229c87583acd12ca51a027d4456', // yak-elk
+  '0xbf770986abf674cf7f94caa4ceb4ed48c2400802', // joe-elk
+  '0xd6a14e672b4817955a5764eb95510370cf6121e5', // ave-elk
+  '0xa88072bb6fdfd51c4e9158e95a9b8d2c200c7291', // png-elk
+  '0x4106ac46726a43859d7fdc9462565eb22097bf05', // vso-elk
+  '0x5dec8fbe088d11c9d8e607f0d4817e6dc7ac2c01', // xava-elk
+  '0x0da1a3138a5f80872550233abcd5b14d46d0951f', // avme-elk
+  '0x8f13649873761a6d57b5b53ece3ebff89d9cd604', // yts-elk
+  '0x7b0c437930876a42c91bd5e261066104eaaf8eab', // olive-elk
+  '0xfbe18a8262f7849659541ffb42bfd91d1fb7179d', // sherpa-elk
+  '0x4c0dfc81f7f971de4b9717350c0a02c8c4645be7', // rugpull-elk
   // Round 11
   '0x9ec3ca469f415a7e55a21dc662d427d59e8de8f6', // avax-elk
   '0xe935028df3285d1852e11dae384534d27887c196', // usdc.e-elk
